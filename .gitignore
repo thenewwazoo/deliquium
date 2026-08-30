@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tgz
+# LEAP client certificate + private key
+secrets.json
+# local config (bridge address, coordinates)
+config.json

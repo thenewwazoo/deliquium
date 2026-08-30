@@ -1,0 +1,60 @@
+{
+  "name": "homebridge-deliquium",
+  "displayName": "Deliquium",
+  "version": "0.1.0",
+  "description": "Gradual twilight lighting for Lutron Caseta, triggered from HomeKit",
+  "author": "Brandon Matthews <thenewwazoo@optimaltour.us>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thenewwazoo/deliquium.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thenewwazoo/deliquium/issues"
+  },
+  "homepage": "https://github.com/thenewwazoo/deliquium#readme",
+  "keywords": [
+    "homebridge-plugin",
+    "lutron",
+    "caseta",
+    "leap",
+    "twilight",
+    "sunset",
+    "sunrise",
+    "dimmer"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "deliquium": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "config.sample.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "homebridge": "^2.0.0",
+    "node": "^22 || ^24 || ^26"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc && node --test",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "lutron-leap": "^3.6.1",
+    "suncalc": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "@types/suncalc": "^1.9.2",
+    "homebridge": "^2.4.0",
+    "typed-emitter": "^2.1.0",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "platform": "Deliquium",
+  "secrets": [
+    {
+      "bridgeid": "0a1b2c3d",
+      "ca": "-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----\n",
+      "key": "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n",
+      "cert": "-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----\n"
+    }
+  ],
+  "location": {
+    "lat": null
+  },
+  "switchResetSeconds": 5,
+  "ramps": [
+    {
+      "name": "Living Room Sunset Ramp",
+      "cooldownMinutes": 60,
+      "lights": [
+        {
+          "zone": "/zone/7",
+          "target": 11,
+          "direction": "dim",
+          "note": "Recessed Lights"
+        },
+        {
+          "zone": "/zone/33",
+          "target": 11,
+          "direction": "dim",
+          "note": "Couch Lamp"
+        },
+        {
+          "zone": "/zone/34",
+          "target": 60,
+          "direction": "brighten",
+          "note": "Chair Lamp"
+        }
+      ]
+    },
+    {
+      "name": "Living Room Sunrise Ramp",
+      "cooldownMinutes": 60,
+      "lights": [
+        {
+          "zone": "/zone/7",
+          "target": 50,
+          "direction": "brighten",
+          "note": "Recessed Lights"
+        },
+        {
+          "zone": "/zone/34",
+          "target": 0,
+          "direction": "dim",
+          "note": "Chair Lamp"
+        }
+      ]
+    }
+  ]
+}
